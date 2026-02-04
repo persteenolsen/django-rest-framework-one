@@ -5,3 +5,4 @@ Pygments==2.19.1
 sqlparse==0.5.3
 psycopg2-binary
 python-dotenv==0.20.0
+whitenoise

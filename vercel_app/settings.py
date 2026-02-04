@@ -48,12 +48,20 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+
+
+    # For serving static files
     "django.contrib.staticfiles",
     "rest_framework",  # new
     "snippets",  # new
 ]
 
 MIDDLEWARE = [
+
+     # For serving all kind of static files in a correct way use Debug = False
+     # This setting is neeeded for serving static files frontend and backend admin
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -68,6 +76,7 @@ ROOT_URLCONF = "vercel_app.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
+        
         "DIRS": [],
         "APP_DIRS": True,
         "OPTIONS": {
