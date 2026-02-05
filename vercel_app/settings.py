@@ -90,6 +90,7 @@ TEMPLATES = [
     },
 ]
 
+# The name of the WSGI application ".app" needs to match the one used in wsgi.py
 WSGI_APPLICATION = "vercel_app.wsgi.app"
 
 
