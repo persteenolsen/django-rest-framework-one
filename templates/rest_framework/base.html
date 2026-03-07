@@ -23,9 +23,11 @@
         <link rel="stylesheet" type="text/css" href="{% static 'rest_framework/css/prettify.css' %}"/>
         <link rel="stylesheet" type="text/css" href="{% static 'rest_framework/css/default.css' %}"/>
         
+        <!--07-03-2026 - Note: The below statement "{{ code_style }}" cause error in VS Code
+         which is just to be ignored -->
         {% if code_style %}
         <style>
-        
+                
         {{ code_style }}
 
         </style>
