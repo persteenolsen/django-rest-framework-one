@@ -1,0 +1,30 @@
+{% extends "rest_framework/base.html" %}
+
+{# Override this template in your own templates directory to customize #}
+
+{% block branding %}
+   
+   <a class='navbar-brand' rel="nofollow" href='https://www.django-rest-framework.org/'>
+       Django REST Framework ...
+   </a>
+                    
+{% endblock %}
+
+
+{% block content %}
+    <br />
+    <b>Last updated:</b> 07-03-2026
+    {{ block.super }}
+    
+    
+    <div class="container">
+      {% block body %}
+       
+      Happy use of Django :-)
+      
+      {{ block.super }}
+       
+    {% endblock %}
+    </div>
+
+{% endblock %}

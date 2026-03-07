@@ -31,14 +31,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY=os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+# DEBUG = True
 
 # With DEBUG=False 404 errors will be directed to a default 404 template
 # Not: Django will display a 404.html if you have created one :-)
 DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
-
 
 # Application definition
 
@@ -77,7 +76,13 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         
-        "DIRS": [],
+        # 07-03-2026 - Disabled
+        # "DIRS": [],
+
+        # 07-03-2026 - Overriding the default template dir for Django REST Framework
+        # to be able to customize the templates
+        'DIRS': [BASE_DIR / 'templates'],
+        
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
