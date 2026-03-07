@@ -2,6 +2,13 @@
 
 {# Override this template in your own templates directory to customize #}
 
+{% block meta %}
+   
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   {{ block.super }}
+
+{% endblock %}
+
 {% block branding %}
    
    <a class='navbar-brand' rel="nofollow" href='https://www.django-rest-framework.org/'>
@@ -12,16 +19,15 @@
 
 
 {% block content %}
+
     <br />
     <b>Last updated:</b> 07-03-2026
     {{ block.super }}
-    
-    
+        
     <div class="container">
       {% block body %}
        
       Happy use of Django :-)
-      
       {{ block.super }}
        
     {% endblock %}
